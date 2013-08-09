@@ -6,8 +6,8 @@ import javax.swing.*;
 import java.awt.*;
 
 public class firstwindow extends JFrame {
-	public static final int W = 300;
-	public static final int H = 200;
+	public static final int W = 600;
+	public static final int H = 500;
 	
 	public static JPanel workspace;
 	public static JPanel white;
@@ -27,6 +27,7 @@ public class firstwindow extends JFrame {
 		listener buttonEar = new listener();
 		JMenuBar mainM = new JMenuBar();
 		JMenu file = new JMenu("File");
+		JMenu Help = new JMenu("Help");
 		JMenuItem newt = new JMenuItem("New");
 		newt.addActionListener(buttonEar);
 		JMenuItem open = new JMenuItem("Open");
@@ -40,6 +41,7 @@ public class firstwindow extends JFrame {
 		file.add(save);
 		file.add(close);
 		mainM.add(file);
+		mainM.add(Help);
 		setJMenuBar(mainM);
 	
 		trial = new JTextField("Enter text here:", 40);
